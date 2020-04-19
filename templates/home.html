@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% load static %}
 
 {% block title %}
 	Home
@@ -7,6 +8,8 @@
 {% block content %}
 
 <h1>Homepage</h1>
+
+<img class="storecover" src="{% static 'images/mia2.jpg' %}">
 
 {% if user.is_authenticated %}
 
