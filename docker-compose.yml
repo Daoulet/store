@@ -8,6 +8,9 @@ services:
       - .:/code
     ports:
       - 8000:8000
+    environment:
+      - SECRET_KEY=9dze554$$8jl89l_@5d1)b(84ebm07j6r=gs86%6z1*2uzsfu3f
+      - DEBUG=1
     depends_on:
       - db
   db:
