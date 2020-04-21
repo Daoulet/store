@@ -8,6 +8,11 @@ class Product(models.Model):
 	price = models.DecimalField(max_digits=8, decimal_places=2)
 	cover = models.ImageField(upload_to='covers/', blank=True)
 
+	class Meta:
+		permissions = [
+			('special_status', 'Can see all products'),
+	]
+
 	def __str__(self):
 		return self.title
 
