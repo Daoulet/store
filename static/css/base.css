@@ -6,3 +6,7 @@ h1 {
 	height: 300px;
 	width: auto; 
 }
+
+p a h2 {
+	font-family: 'Baloo Paaji 2', cursive;
+}

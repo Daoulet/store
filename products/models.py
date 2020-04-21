@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 class Product(models.Model):
 	title = models.CharField(max_length=200)
 	author = models.CharField(max_length=200)
+	body = models.TextField(null=True)
 	price = models.DecimalField(max_digits=8, decimal_places=2)
 	cover = models.ImageField(upload_to='covers/', blank=True)
 
