@@ -6,12 +6,25 @@
 
 {% block content %}
 	
-{% for product in product_list %}
 
-<div>
-	<h2><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h2>
+
+
+<div class="d-flex justify-content-around" style="columns: 2;">
+	{% for product in product_list %}
+	<div class="card" style="width: 18rem;">
+  <img class="storecover" src="{{ product.cover.url }}" alt="{{ product.title }}">
+  <div class="card-body">
+    <h2><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h2>
+    <p>Author: {{ product.author }}</p>
+	<p>Price: {{ product.price }}</p>
+	<a class="btn btn-primary" href="{{ product.get_absolute_url }}">Open page</a>
+  </div>
 </div>
-	
 {% endfor %}
+</div>
+
+
+	
+
 
 {% endblock content %}
